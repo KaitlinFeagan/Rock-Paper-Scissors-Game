@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>HELLO THERE EVERYONE!</h1>
+    <script>
+
+        let test = "Helllloooooo??"
+        console.log(test);
+
+        function randomChoice() {
+            return math.floor(math.random() * 3);
+        }
+        
+        randomChoice();
+
+        function computerSelection() {
+            if (randomChoice === 0) {
+                computerSelection = "rock";
+            } else if (randomChoice === 1) {
+                computerSelection = "paper";
+            } else (randomChoice === 2); {
+                computerSelection = "scissors";
+            }   
+        }
+
+        function playerSelection() {
+            prompt("Please pick rock, paper, or scissors to play.");
+        }
+
+        computerSelection();
+        playerSelection();
+
+
+        function verifyPlayerSelection() {
+            playerSelection.toLowerCase();
+            
+            if (playerSelection != "rock" || "paper" || "scissors") {
+                return "Please type in rock, paper or scissors.  Make sure it's spelled correctly!"
+            }
+        }
+    
+        verifyPlayerSelection();
+
+        console.log(computerSelection);
+        console.log(playerSelection);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    </body>
+</html>
