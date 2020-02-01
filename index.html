@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset = "utf-8">
     </head>
     <body>
-        <h1>HELLO THERE EVERYONE!</h1>
+        <h1>Have fun with the game!</h1>
     <script>
-
-        let test = "Helllloooooo??"
-        console.log(test);
-
-        function randomChoice() {
-            return math.floor(math.random() * 3);
+        function computerPlay() {
+            return (Math.floor(Math.random() * 3));
         }
         
-        randomChoice();
+        let randomChoice = computerPlay();
 
-        function computerSelection() {
-            if (randomChoice === 0) {
-                computerSelection = "rock";
-            } else if (randomChoice === 1) {
-                computerSelection = "paper";
-            } else (randomChoice === 2); {
-                computerSelection = "scissors";
+        function computerChoice() {
+            if (randomChoice == 0) {
+                return "rock";
+            } else if (randomChoice == 1) {
+                return "paper";
+            } else (randomChoice == 2); {
+                return "scissors";
             }   
         }
 
-        function playerSelection() {
-            prompt("Please pick rock, paper, or scissors to play.");
+        let computerSelection = computerChoice();
+
+        console.log("The computer picks: " + computerSelection);
+
+        // Only the computer works so far...
+
+        function playerChoice() {
+            let play1 = prompt("Please pick rock, paper, or scissors to play.");
+            let play2 = play1.toLowerCase();
+            return play2;
         }
 
-        computerSelection();
-        playerSelection();
+        let playerSelection = playerChoice();
+        
+        console.log("The player picks: " + playerSelection);
 
-
-        function verifyPlayerSelection() {
-            playerSelection.toLowerCase();
-            
-            if (playerSelection != "rock" || "paper" || "scissors") {
-                return "Please type in rock, paper or scissors.  Make sure it's spelled correctly!"
+        function playRound(playerSelection, computerSelection){
+            if (playerSelection == computerSelection) {
+                return "It's a tie!"
+            } else if (playerSelection == "rock" && computerSelection == "paper") {
+                return "You lose! Paper beats rock."
+            } else if (playerSelection == "rock" && computerSelection == "scissors") {
+                return "You win! Rock beats scissors."    
+            } else if (playerSelection == "paper" && computerSelection == "rock") {
+                return "You win! Paper beats rock."
+            } else if (playerSelection == "paper" && computerSelection == "scissors") {
+                return "You lose! Scissors beat paper."    
+            } else if (playerSelection == "scissors" && computerSelection == "rock") {
+                return "You lose! Rock beats scissors."
+            } else if (playerSelection == "scissors" && computerSelection == "paper") {
+                return "You win! Scissors beat paper."
+            } else {
+                return "Remember to pick rock, paper, or scissors. No cheating!"
             }
         }
-    
-        verifyPlayerSelection();
 
-        console.log(computerSelection);
-        console.log(playerSelection);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        console.log(playRound(playerSelection, computerSelection));
     </script>
     </body>
 </html>
