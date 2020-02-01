@@ -26,8 +26,6 @@
 
         console.log("The computer picks: " + computerSelection);
 
-        // Only the computer works so far...
-
         function playerChoice() {
             let play1 = prompt("Please pick rock, paper, or scissors to play.");
             let play2 = play1.toLowerCase();
@@ -59,6 +57,33 @@
         }
 
         console.log(playRound(playerSelection, computerSelection));
+
+        //Still working on getting it to keep score.
+
+        let playerScore = 0;
+        let computerScore = 0;
+
+        function keepScore(playerScore, computerScore) {
+            if (playerSelection == computerSelection) {
+                playerScore + 0;
+            } else if (playerSelection == "paper" && computerSelection == "rock" || playerSelection ==
+              "rock" && computerSelection == "scissors" || playerSelection == "scissors" && 
+              computerSelection == "paper") {
+                playerScore++;
+                return "You win! " + playerSelection + " beats " + computerSelection + "."
+            } else if (computerSelection == "paper" && playerSelection == "rock" || computerSelection ==
+              "rock" && playerSelection == "scissors" || computerSelection == "scissors" && 
+              playerSelection == "paper") {
+                computerScore++;
+                return "You lose! " + computerSelection + " beats " + playerSelection + "."
+              } else {
+                  return "Remember to pick rock, paper, or scissors. No cheating!"
+              }
+            }
+
+        console.log(keepScore(playerScore, computerScore));
+        console.log("Player score: " + playerScore);
+        console.log("Computer score: " + computerScore);
     </script>
     </body>
 </html>
