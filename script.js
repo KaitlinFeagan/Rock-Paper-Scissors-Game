@@ -94,36 +94,3 @@ function areYaWinningSon() {
         return;
     }
 }
-
-/* 
-else if (playerSelection === "scissors" && computerSelection === "scissors"){
-            return("Tie");
-        } else if (playerSelection === "paper" && computerSelection === "paper"){
-            return("Tie");
-        } else (playerSelection === "rock" && computerSelection === "rock"); {
-            return("Tie");
-        }
-*/
-
-
-/*
-THE PLAN:
-
-Copy and paste what I can use from before
-
-Add event listener to hook up the id's of the buttons to the player's choice
-of rock, paper, and scissors
-
-Ensure it knows what the player's and computer's choices are
-
-Copy/paste or write code to see who should win (ie, paper beats rock and so on)
-
-Get the computer to pick again once a button is pressed and the round is played
-
-Create a function to keep track of the score and stop after someone hits 5 points
-
-Add in a scoreboard that tells you what the computer picked and who won, how many 
-points you both have
-
-display a win/lose message after the game and add an option to reset
-*/
